@@ -1,4 +1,4 @@
-
+/* 
 const dummyArray = [2, 3, 4, 7];
 
 function binarySearch(arr, k) {
@@ -23,7 +23,7 @@ function binarySearch(arr, k) {
     // console.log('Output is : ', dummy[k-1]);
 }
 
-binarySearch([2, 3, 4, 7], 5);
+binarySearch([2, 3, 4, 7], 5); */
 
 
 // --- better 48 ms code
@@ -44,3 +44,29 @@ var findKthPositive = function(arr, k) {
     return num
 };
 */
+
+// ---- another approach
+
+const dummyArray = [2, 3, 4, 7];
+
+function dummy (arr, k){
+
+    i = 0 ;
+    n = 1 ; 
+    let dummyArr = [] ; 
+    while(true){
+        if(arr[i] != n){
+            dummyArr.push(n);
+            n++ ; 
+        }else{
+            i++ ; 
+            n++ ;
+        }
+        if(dummyArr.length > k){
+            break;
+        }
+    }
+    return dummyArr[k-1] ; 
+}
+
+console.log(dummy([1,2,3,4], 2));
