@@ -1,19 +1,18 @@
-
 /* 
  * 268. Missing Number
 
   Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
 */
 
-function test(arr){
-    for(let i=0; i<=arr.length; i++){
-        if(!arr.includes(i)){
-            return i;
-        }
+function test(arr) {
+  for (let i = 0; i <= arr.length; i++) {
+    if (!arr.includes(i)) {
+      return i;
     }
+  }
 }
 
-console.log(test([9,6,4,2,3,5,7,0,1]));
+console.log(test([9, 6, 4, 2, 3, 5, 7, 0, 1]));
 
 /* 
 --------------  Better approach 
