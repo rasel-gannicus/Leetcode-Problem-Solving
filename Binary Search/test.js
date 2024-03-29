@@ -1,17 +1,23 @@
-const test = [1];
+// const test = ["a", "b", "c", "d"];
+const test = ["c","f","j"];
 
-function dummy(nums) {
-  const sortedNums = nums.sort((a, b) => a - b);
-  if(sortedNums.length == 1){
-    if(sortedNums[0] !== 1){
-      return 1
+function dummy(arr, target) {
+  let start = 0;
+  let end = arr.length - 1;
+  let mid;
+
+  while (start <= end) {
+    mid = Math.floor((start + end) / 2);
+    if (arr[mid] == target) {
+      return arr[mid + 1]
+    }
+    if (arr[mid] < target) {
+      return(arr[mid + 1]);
+    }
+    if (arr[mid] > target) {
+      end = mid - 1;
     }
   }
-  for (let i = 0; i < sortedNums.length; i++) {
-    if(!sortedNums.includes(i)){
-      return(i);
-    }
-    // console.log(i+1);
-  }
+  return arr[0] 
 }
-dummy(test);
+console.log(dummy(["c","f","j"], "s"));
