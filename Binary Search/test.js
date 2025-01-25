@@ -12,6 +12,7 @@ function dummy(arr, target) {
       return arr[mid + 1]
     }
     if (arr[mid] < target) {
+      for(let i = 0; i <)
       return(arr[mid + 1]);
     }
     if (arr[mid] > target) {
